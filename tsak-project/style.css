@@ -45,6 +45,7 @@ main {
   height: 10rem;
   background-color: #28293e;
   color: #ffffff;
+  position: relative;
 }
 
 .nav-container {
@@ -371,6 +372,58 @@ main {
   line-height: 3.2rem;
 
   color: rgba(57, 20, 0, 0.64);
+}
+
+.sidebar {
+  width: 100%;
+  background-color: #28293e;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  transform: translateX(-10000px);
+  height: 100vh;
+  -webkit-transform: translateX(-10000px);
+  -moz-transform: translateX(-10000px);
+  -ms-transform: translateX(-10000px);
+  -o-transform: translateX(-10000px);
+}
+
+.sidebar.active {
+  transition: all 0.5s ease-in;
+  width: 100%;
+  background-color: #28293e;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 12rem;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.cross-btn {
+  text-align: right;
+}
+
+.cross-btn .fa-times {
+  font-size: 2.5rem;
+  padding: 2rem;
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {

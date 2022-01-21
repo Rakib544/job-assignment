@@ -34,8 +34,27 @@
       <div>
         <a href="#" class="contact-btn">Contact</a>
       </div>
-      <div class="menu">
+      <div class="menu" id="menu">
         <i class="fas fa-bars"></i>
+      </div>
+      <div class="sidebar" id="sidebar">
+        <div class="cross-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <ul>
+          <li class="nav-item">
+            <a href="#" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Blog</a>
+          </li>
+        </ul>
       </div>
     </nav>
     <main>
@@ -237,5 +256,16 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const menu = document.getElementById("menu");
+      menu.addEventListener("click", () => {
+        sidebar.classList.add("active");
+      });
+      const sidebar = document.getElementById("sidebar");
+      sidebar.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+      });
+    </script>
   </body>
 </html>
